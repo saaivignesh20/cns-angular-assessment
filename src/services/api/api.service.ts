@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { EBI_API_BASE_URI, HRA_API_BASE_URI } from '../constants';
-import { AtlasApiResponse, EBIApiResponse } from '../interfaces';
+import { EBI_API_BASE_URI, HRA_API_BASE_URI } from '../../constants';
+import { AtlasApiResponse, EBIApiResponse } from '../../interfaces';
 
 @Injectable({
   providedIn: 'root'
