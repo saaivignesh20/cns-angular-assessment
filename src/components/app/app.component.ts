@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ApiService } from '../../services/api.service';
+import { ApiService } from '../../services/api/api.service';
 import { Structure } from '../../interfaces';
 import { DetailsDialogComponent } from '../details-dialog/details-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
