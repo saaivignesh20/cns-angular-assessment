@@ -1,0 +1,28 @@
+<div class="dialog-title" *ngIf="data">
+  <h2>{{ data.name }}</h2>
+  <button mat-icon-button aria-label="Close" mat-dialog-close>
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+<mat-dialog-content>
+  <ng-container *ngIf="data; else noData">
+    <div>
+      <h4>Description</h4>
+      <p>{{ data.description }}</p>
+    </div>
+    <div>
+      <h4>Ontology Link</h4>
+      <p>{{ data.ontologyLink }}</p>
+    </div>
+    <div>
+      <h4>IRI</h4>
+      <p>{{ data.iri }}</p>
+    </div>
+  </ng-container>
+  <ng-template #noData>
+    <div>No Data Available since no ID is provided.</div>
+    <div mat-dialog-actions class="pl-0 pr-0">
+      <button mat-button mat-dialog-close="">Ok, understood</button>
+    </div>
+  </ng-template>
+</mat-dialog-content>

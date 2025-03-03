@@ -1,0 +1,22 @@
+.dialog-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+mat-dialog-content {
+  h4 {
+    margin-top: 0;
+  }
+}
+
+::ng-deep {
+  .pl-0 {
+    padding-left: 0 !important;
+  }
+
+  .pr-0 {
+    padding-right: 0 !important;
+  }
+}
