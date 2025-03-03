@@ -1,0 +1,42 @@
+.container {
+  margin: 0 auto;
+  max-width: 1080px;
+
+  .header {
+    margin-bottom: 50px;
+    h1 {
+      margin-bottom: 10px;
+    }
+  }
+
+  .structure-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    .structure {
+      border: 1px solid silver;
+      padding: 20px;
+
+      .structure-name {
+        font-size: 24px;
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+
+      &:hover {
+        background-color: lightgray;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}

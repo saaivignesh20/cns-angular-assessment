@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="flex justify-center">
+    <div class="header">
+      <h1>Anatomical Structures Data</h1>
+      <div>{{ uniqueAnatomicalStructures.length || 0 }} unique anatomical structures fetched</div>
+    </div>
+    <div class="structure-grid">
+      @for (struct of uniqueAnatomicalStructures; track struct) {
+      <div class="structure" (click)="showAdditionalInformation(struct?.id || '')">
+        <div class="structure-name">{{ struct?.name || '-' }}</div>
+        <div class="structure-id">{{ struct?.id || '-' }}</div>
+      </div>
+      }
+    </div>
+  </div>
+</div>
