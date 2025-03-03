@@ -17,6 +17,9 @@ export class AppComponent {
     this.fetchAnatomicalDataFromApi();
   }
 
+  /**
+   * Fetches the anatomical data from the API.
+   */
   private fetchAnatomicalDataFromApi() {
     this.api.getData(this.resourceId).subscribe((data) => {
       const rows = data.data;
@@ -26,6 +29,11 @@ export class AppComponent {
     });
   }
 
+  /**
+   * Creates and returns a list of unique anatomical structures from given array.
+   * @param anatomicalStructures Array containing list all anatomical structures fetched.
+   * @returns Unique list of anatomical structures.
+   */
   private createUniqueAnatomicalStructureList(anatomicalStructures: Structure[]) {
     const uniqueNames = new Set();
     const uniqueAnatomicalStructures: Structure[] = [];
@@ -39,6 +47,10 @@ export class AppComponent {
     return uniqueAnatomicalStructures;
   }
 
+  /**
+   * Shows additional information dialog for the selected anatomical structure.
+   * @param structureId Unique ID of the anatomical structure.
+   */
   public showAdditionalInformation(structureId: string) {
     if (!structureId) {
       this.dialog.open(DetailsDialogComponent, {
