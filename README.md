@@ -78,5 +78,5 @@ Deployed the built code to GitHub Pages [![pages-build-deployment](https://githu
 
 ## Libraries Used
 
-- **Angular Material**: Used for the modal component
+- **Angular Material**: Material UI Framework
 - **angular-cl-ghpages**: Used for GitHub pages deployment
