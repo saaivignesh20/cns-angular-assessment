@@ -1,59 +1,82 @@
-# AngularAssessment
+# Angular Developer Test
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
+This Angular application is designed to fetch data from the provided API, display a list of unique anatomical structures, and retrieve additional information about each structure upon clicking on its name.
 
-## Development server
+## How to Run
 
-To start a local development server, run:
+Clone the repository first and get inside the directory:
 
-```bash
-ng serve
-```
+    $ git clone https://github.com/saaivignesh20/cns-angular-assessment && cd cns-angular-assessment
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Install dependencies
 
-## Code scaffolding
+    $ npm install
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Serve the application
 
-```bash
-ng generate component component-name
-```
+    $ ng serve
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Overview of the Solution
 
-```bash
-ng generate --help
-```
+This application is built using Angular 19 and utilizes various aspects of the Angular framework to build an application that serves a list of Anatomical structures.
 
-## Building
+Angular concepts such as modules, services, dependency injection, directives are used in order to complete the task in 2 phases.
 
-To build the project run:
+## Step-by-Step Solution
 
-```bash
-ng build
-```
+### Phase I
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+#### Fetch Data
 
-## Running unit tests
+Created a service (`api.service.ts`) to fetch data from the provided API using the `HttpClient` module.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+#### Unique Anatomical Structures
 
-```bash
-ng test
-```
+Processed the fetched data to create a list of unique anatomical structures by name.
 
-## Running end-to-end tests
+#### Display List
 
-For end-to-end (e2e) testing, run:
+Updated the main `app.component.ts` to display the list of unique anatomical structures.
 
-```bash
-ng e2e
-```
+### Phase II
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+#### Retrieve Additional Details
 
-## Additional Resources
+Utilized the same API service, added additional method to retrieve additional information about each structure upon clicking on its name
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+#### Display Additional Details
+
+Created a component (`details-dialog.component.ts`) to display the additional details in a MatDialog modal.
+
+#### Handle Invalid IDs
+
+Handled empty/invalid ID errors by displaying a message to the user.
+
+## Architecture
+
+### Services
+
+Used services and dependency injection concepts to handle data fetching and processing outside of the components.
+
+### Components
+
+Created two components to display the list of anatomical structures and the additional information in a MatDialog modal.
+
+### Interfaces and Constants
+
+Defined interfaces (for type-safety) and constants needed for fetching the anatomical structure data and the additional information.
+
+### Modular Functions
+
+Broke down the code into modular functions to improve readability and maintainability.
+
+## Deployment
+
+Deployed the built code to GitHub Pages [![pages-build-deployment](https://github.com/saaivignesh20/cns-angular-assessment/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/saaivignesh20/cns-angular-assessment/actions/workflows/pages/pages-build-deployment)
+
+[Click Here to Access Deployment 👈](https://saaivignesh.in/cns-angular-assessment)
+
+## Libraries Used
+
+- **Angular Material**: Used for the modal component
+- **angular-cl-ghpages**: Used for GitHub pages deployment
