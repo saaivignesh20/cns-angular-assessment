@@ -16,6 +16,10 @@ Serve the application
 
     $ ng serve
 
+## Screenshot
+
+![Screenshot](screenshot.png 'Screenshot')
+
 ## Overview of the Solution
 
 This application is built using Angular 19 and utilizes various aspects of the Angular framework to build an application that serves a list of Anatomical structures.
