@@ -1,4 +1,4 @@
-# Angular Developer Test
+# CNS Angular Developer Assessment - Solution
 
 This Angular application is designed to fetch data from the provided API, display a list of unique anatomical structures, and retrieve additional information about each structure upon clicking on its name.
 
